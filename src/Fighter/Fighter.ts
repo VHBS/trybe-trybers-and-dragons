@@ -5,6 +5,6 @@ export default interface Fighter extends SimpleFigther{
   defense: number;
   energy?: Energy;
 
-  special(enemy: Fighter): void;
+  special(enemy: SimpleFigther): void;
   levelUp(): void;
 }
