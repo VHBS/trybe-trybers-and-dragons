@@ -62,7 +62,7 @@ export default class Character implements Fighter {
     enemy.receiveDamage(this._strength);
   }
 
-  special(enemy: Fighter): void {
+  special(enemy: Fighter | SimpleFighter): void {
     const d20 = getRandomInt(1, 20);
     if (d20 > 15) { 
       return enemy.receiveDamage(this._strength * getRandomInt(8, 10)); 
