@@ -10,9 +10,9 @@ export default class PVE extends Battle {
   }
 
   fight(): number {
-    this._monsters.forEach((monster) => {
+    this._monsters.map((monster) => {
       this.player.attack(monster);
-      monster.attack(this.player);
+      return monster.attack(this.player);
     });
     return super.fight();
   }
